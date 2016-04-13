@@ -267,6 +267,8 @@ var Dataset = (function() {
 
         // if the update has been canceled or if the query has changed
         // do not render the suggestions as they've become outdated
+        console.log(canceled, rendered, that.limit);
+        console.log(suggestions);
         if (!canceled && rendered < that.limit) {
           that.cancel = $.noop;
           rendered += suggestions.length;
